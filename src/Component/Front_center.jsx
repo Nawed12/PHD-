@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css'
-
+import "../styles/Home.css";
+import { Link } from "react-router-dom";
 function Front_center(){
     return(
       <div>
@@ -36,8 +37,15 @@ Centurion University of Technology and Management, Visakhapatnam – Read more
 </ul>
   </div>
   
-  
-
+  <div className="home" style={{ backgroundColor:'grey' }}>
+      <div className="headerContainer">
+        <h1> Ph.D Programme </h1>
+        <p> Give yourself an edge in this competitive world. Join a multidisciplinary PhD Program to enrich your research experience. The University’s PhD Programs provide the chance to work with others who share a passion for discovering new knowledge and push disciplinary boundaries.</p>
+        <Link to="/registraion">
+          <button> APPLY NOW </button>
+        </Link>
+      </div>
+    </div>
   
   </div>
   
