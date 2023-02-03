@@ -336,7 +336,7 @@ h3.jamia_millia_islamia{
 }
 
 .messages{
-  display: flex;
+  display: block;
 }
 
 .message_heading{
@@ -375,6 +375,9 @@ h3.jamia_millia_islamia{
   background-color: white;
   margin: 10px;
 }
+/* .para{
+  display: block;
+} */
 
 
 

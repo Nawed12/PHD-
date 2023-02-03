@@ -10,7 +10,7 @@ import News from  './Component/News'
 import Student from './Component/Student'
 import Gallery from './Component/Gallery'
 import Contact from  './Component/Contact'
-
+import registration from './Component/registration';
 
 import {NavLink , Route, Switch } from 'react-router-dom';
 // import { render } from '@testing-library/react';
@@ -21,21 +21,20 @@ function App() {
   return (
    <div>
 <Header/>
-
         <main>
             <Switch>
-
-                <Route path="/college-website" component={Front_center} exact/>
+                
+                <Route path="/" component={Front_center} exact/>
                 <Route path="/about" component={About}/>
                 <Route path="/news" component={News}/>
                 <Route path="/student" component={Student}/>
                 <Route path="/gallery" component={Gallery}/>
                 <Route path="/contact" component={Contact}/>
-             
+                 <Route path="/registraion"component={registration}/>
             </Switch>
         </main>
   <div>
-
+  
   </div>
 <Footer/>
     </div>
@@ -139,12 +138,12 @@ render(){
     <div>
           <header className='header'>
 
-         <NavLink to="/college-website">
+         <NavLink to="/">
         <img src={process.env.PUBLIC_URL+"/cutm/cutm.png"} className="jamia_logo"/>
       </NavLink>
 
        <img src={process.env.PUBLIC_URL+"/cutm/cutmlo.jpg"} className="cutm_logo"/>
-     <NavLink to="/college-website" style={{textDecoration:"none"}}>
+     <NavLink to="/" style={{textDecoration:"none"}}>
      <h1 className="university_cutm"> <span> CENTURION &nbsp;UNIVERSITY </span> </h1> <br/>
      </NavLink>
       <h3 className="jamia_millia_islamia"> PHD DASHBOARD  <br/> <p id="central">(Top Private University in Bhubaneswar)</p> </h3>
@@ -162,7 +161,7 @@ render(){
 
 
     <ul>
-      <li className="menu_ani"> <NavLink to="/college-website"> HOME </NavLink> </li>
+      <li className="menu_ani"> <NavLink to="/"> HOME </NavLink> </li>
       <li className="menu_ani" id="abt"> <NavLink activeClassName="active_class" to="/about"> ABOUT  </NavLink>  </li>
       <li className="menu_ani" > <NavLink activeClassName="active_class" to="/news"> NEWS </NavLink>    </li>
       <li className="menu_ani"> <NavLink activeClassName="active_class" to="/student"> STUDENT </NavLink>  </li>
