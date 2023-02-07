@@ -15,8 +15,8 @@ class Photo1 extends React.Component {
                 </div>
 
                 <div className="gallery">
-                <a href={process.env.PUBLIC_URL+"/cutm/9.jpg"} target="_blank">
-                <img src={process.env.PUBLIC_URL+"/cutm/9.jpg"} alt="Cinque Terre" width="600" height="400"/></a>
+                <a href={process.env.PUBLIC_URL+"/cutm/10.jpg"} target="_blank">
+                <img src={process.env.PUBLIC_URL+"/cutm/10.jpg"} alt="Cinque Terre" width="600" height="400"/></a>
                 <div className="desc">CENTURION BUILDING</div>
                 </div>
 
@@ -39,8 +39,8 @@ class Photo1 extends React.Component {
                 </div>
 
                 <div className="gallery">
-                <a href={process.env.PUBLIC_URL+"/cutm/9.jpg"} target="_blank">
-                <img src={process.env.PUBLIC_URL+"/cutm/9.jpg"} alt="Cinque Terre" width="600" height="400"/></a>
+                <a href={process.env.PUBLIC_URL+"/cutm/11.jpg"} target="_blank">
+                <img src={process.env.PUBLIC_URL+"/cutm/11.jpg"} alt="Cinque Terre" width="600" height="400"/></a>
                 <div className="desc">CENTURION BUILDING</div>
                 </div>
 
@@ -51,14 +51,14 @@ class Photo1 extends React.Component {
                 </div>
 
                 <div className="gallery">
-                <a href={process.env.PUBLIC_URL+"/cutm/9.jpg"} target="_blank">
-                <img src={process.env.PUBLIC_URL+"/cutm/9.jpg"} alt="Cinque Terre" width="600" height="400"/></a>
+                <a href={process.env.PUBLIC_URL+"/cutm/12.jpg"} target="_blank">
+                <img src={process.env.PUBLIC_URL+"/cutm/12.jpg"} alt="Cinque Terre" width="600" height="400"/></a>
                 <div className="desc">CENTURION BUILDING</div>
                 </div>
 
                 <div className="gallery">
-                <a href={process.env.PUBLIC_URL+"/cutm/9.jpg"} target="_blank">                
-                <img src={process.env.PUBLIC_URL+"/cutm/9.jpg"} alt="Cinque Terre" width="600" height="400"/></a>
+                <a href={process.env.PUBLIC_URL+"/cutm/13.jpg"} target="_blank">                
+                <img src={process.env.PUBLIC_URL+"/cutm/13.jpg"} alt="Cinque Terre" width="600" height="400"/></a>
                 <div className="desc">CENTURION BUILDING</div>
                 </div>
 
