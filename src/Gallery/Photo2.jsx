@@ -40,7 +40,7 @@ class Photo2 extends React.Component {
                 </div>
 
                 <div className="gallery">
-                <a href={process.env.PUBLIC_URL+"/cutm/2.jpg"} target="_blank">                
+                <a href={process.env.PUBLIC_URL+"/cutm/14.jpg"} target="_blank">                
                 <img src={process.env.PUBLIC_URL+"/cutm/2.jpg"} alt="Cinque Terre" width="600" height="400"/></a>
                 <div className="desc">CUTM BUILDING</div>
                 </div>
@@ -76,8 +76,8 @@ class Photo2 extends React.Component {
                 </div>
 
                 <div className="gallery">
-                <a href={process.env.PUBLIC_URL+"/cutm/poly4.jpg"} target="_blank">                
-                <img src={process.env.PUBLIC_URL+"/cutm/poly4.jpg"} alt="Cinque Terre" width="600" height="400"/></a>
+                <a href={process.env.PUBLIC_URL+"/cutm/15.jpg"} target="_blank">                
+                <img src={process.env.PUBLIC_URL+"/cutm/15.jpg"} alt="Cinque Terre" width="600" height="400"/></a>
                 <div className="desc">CUTM BUILDING</div>
                 </div>
                 
