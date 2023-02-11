@@ -28,15 +28,15 @@ class News extends React.Component {
                     </div>
                   
                     <div style={card}>
-                        <h5 className="date">22/4/1021</h5>
+                        <h5 className="date">22/3/2023</h5>
                         <div className="notice">  
-                          <a href="https://cutm.ac.in/research/phd-programme" target="_blank">Last date for registration is extended to 30 Nov 2022. </a></div> 
+                          <a href="https://cutm.ac.in/research/phd-programme" target="_blank">Last date for registration is extended to 30 Nov 2023. </a></div> 
                          
                     </div>
                     <div style={card}>
-                        <h5 className="date">22/4/1021</h5>
+                        <h5 className="date">22/3/2023</h5>
                         <div className="notice">  
-                         <a href="https://cutm.ac.in/research/phd-programme" target="_blank"> LAST DATE FOR RECEIVING ONLINE APPLICATIONS IS 30th Nov 2022.</a> </div> 
+                         <a href="https://cutm.ac.in/research/phd-programme" target="_blank"> LAST DATE FOR RECEIVING ONLINE APPLICATIONS IS 30th Nov 2023.</a> </div> 
                          
                     </div>
                     
