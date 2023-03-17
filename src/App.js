@@ -7,7 +7,7 @@ import React from 'react';
 import Front_center from  './Component/Front_center'
 import About from  './Component/About'
 import News from  './Component/News'
-import Student from './Component/Student'
+import Placement from './Component/Placement'
 import Gallery from './Component/Gallery'
 import Contact from  './Component/Contact'
 import registration from './Component/registration';
@@ -27,7 +27,7 @@ function App() {
                 <Route path="/" component={Front_center} exact/>
                 <Route path="/about" component={About}/>
                 <Route path="/news" component={News}/>
-                <Route path="/student" component={Student}/>
+                <Route path="/placement" component={Placement}/>
                 <Route path="/gallery" component={Gallery}/>
                 <Route path="/contact" component={Contact}/>
                  <Route path="/registraion"component={registration}/>
@@ -164,7 +164,7 @@ render(){
       <li className="menu_ani"> <NavLink to="/"> HOME </NavLink> </li>
       <li className="menu_ani" id="abt"> <NavLink activeClassName="active_class" to="/about"> ABOUT  </NavLink>  </li>
       <li className="menu_ani" > <NavLink activeClassName="active_class" to="/news"> NEWS </NavLink>    </li>
-      <li className="menu_ani"> <NavLink activeClassName="active_class" to="/student"> STUDENT </NavLink>  </li>
+      <li className="menu_ani"> <NavLink activeClassName="active_class" to="/placement"> PLACEMENT </NavLink>  </li>
       
 
       
@@ -296,9 +296,5 @@ class Footer extends React.Component{
   )
 }
 }
-
-
-
-
 
 export default App;
