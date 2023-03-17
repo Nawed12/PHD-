@@ -38,8 +38,8 @@ h1.university_cutm{
   font-size:65px;
   position:relative;
   top: 35px;
-  font-family:algerian,serif;
-  color:green;
+  font-family:Arial, Helvetica, sans-serif;
+  color:rgb(148, 3, 3);
   margin:0 auto;
   display: flex;
   justify-content: center;
