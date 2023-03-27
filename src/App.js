@@ -7,7 +7,8 @@ import React from 'react';
 import Front_center from  './Component/Front_center'
 import About from  './Component/About'
 import News from  './Component/News'
-import Student from './Component/Placement'
+// import Student from './Component/Placement'
+import Placement from './Component/Placement'
 import Gallery from './Component/Gallery'
 import Contact from  './Component/Contact'
 import registration from './Component/registration';
@@ -172,6 +173,7 @@ render(){
       <li className="menu_ani"> <NavLink activeClassName="active_class" to="/contact"> CONTACT </NavLink> </li>
       <li> <input type="search" placeholder="Search" className="search_bar" id="search_bar"/>  </li>
       <li>  <input type="button" className="submit_button" id="srch_btn" /> </li>
+
     </ul>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
  import "../styles/Form.css";
 // import "../photo/cutm2.jpg";
 
@@ -6,7 +6,8 @@ import React from 'react'
 
 
 function Form() {
-    
+
+
     return (
       <>
       <div className="cotainer">
@@ -41,15 +42,15 @@ function Form() {
           </div>
           <div className="input-box ">
             <span className="details">City</span>
-            <input type="text" placeholder="Enter your city" required/>
+            <input type="text" placeholder="Enter your city" required />
           </div>
           <div className="input-box ">
             <span className="details">State</span>
-            <input type="text" placeholder="Enter your state" required/>
+            <input type="text" placeholder="Enter your state" required />
           </div>
           <div className="input-box ">
             <span className="details">Pincode</span>
-            <input type="text" placeholder="Confirm your pincode" required/>
+            <input type="text" placeholder="Confirm your pincode" required />
           </div>
           <div className="input-box ">
             <span classNae="details">10th</span>
@@ -57,7 +58,7 @@ function Form() {
           </div>
           <div className="input-box ">
             <span className="details">12th</span>
-            <input type="text" placeholder="Enter your 12th mark" required/>
+            <input type="text" placeholder="Enter your 12th mark" required />
           </div>
           <div className="input-box ">
             <span className="details">Graduation</span>
@@ -65,7 +66,7 @@ function Form() {
           </div>
           <div className="input-box ">
             <span className="details">Perferences </span>
-            <select type="text" name="languages" id="lang">
+            <select type="text" name="languages" id="lang"> 
         <option value="javascript">JavaScript</option>
         <option value="php">PHP</option>
         <option value="java">Java</option>
@@ -96,6 +97,7 @@ function Form() {
 
 
       </>
+     
     );
   }
   
