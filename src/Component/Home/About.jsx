@@ -1,8 +1,11 @@
 import React from 'react'
-
+import Header from '../Header'
+import Footer from '../Footer'
 export default function About() {
   return (
+    
     <>
+    <Header/>
     <h2 style={{ fontSize: '30px', color: '#008000', borderLeft: '5px solid #008000', borderBottom: '5px solid #008000', paddingLeft: '10px' }}><b>About </b></h2>
             
     
@@ -20,6 +23,7 @@ export default function About() {
            Facilitating improved market access to goods and financial services to the target population. 
            Promotion of lighthouse project interventions in the target area.
             </p>
+            <Footer/>
       </>
   )
 }

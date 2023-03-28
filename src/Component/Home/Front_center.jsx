@@ -1,10 +1,13 @@
 import React from 'react';
-import '../App.css'
-import "../styles/Home.css";
+import '../../App.css';
+import "../../styles/Home.css";
 import { Link } from "react-router-dom";
+import Header from '../Header';
+import Footer from '../Footer';
 function Front_center(){
     return(
       <div>
+        <Header/>
         <div className="image_home">
   
      
@@ -48,7 +51,7 @@ Centurion University of Technology and Management, Visakhapatnam – Read more
     </div>
   
   </div>
-  
+  <Footer/>
       </div>
     )
   }

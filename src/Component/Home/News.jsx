@@ -1,5 +1,8 @@
 import React from 'react';
 import './news.css';
+// import '.Component/Home/news.css';
+import Header from '../Header';
+import Footer from '../Footer';
 
 class News extends React.Component {
     render() {
@@ -20,7 +23,7 @@ class News extends React.Component {
 
         return (
             <div>
-
+<Header/>
                 <div style={card}>
                     <div style={container}>
                         <h1 className="news_head">Notice</h1>
@@ -41,6 +44,7 @@ class News extends React.Component {
                     </div>
                     
                 </div>
+                <Footer/>
             </div >
         )
     }

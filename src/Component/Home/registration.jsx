@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
- import "../styles/Form.css";
-// import "../photo/cutm2.jpg";
+ import "../../styles/Form.css";
+import Footer from '../Footer';
+import Header from '../Header';
 
 
 
@@ -9,6 +10,7 @@ function Form() {
 
 
     return (
+      <div><Header/>
       <>
       <div className="cotainer">
         <h1>Centurion University Entrance Exam (Phd)</h1>
@@ -97,7 +99,9 @@ function Form() {
 
 
       </>
-     
+      <div><Footer/></div>
+      </div>
+
     );
   }
   
