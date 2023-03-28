@@ -13,6 +13,12 @@ import Gallery from './Component/Gallery'
 import Contact from  './Component/Contact'
 import registration from './Component/registration';
 
+
+import Faculty from './Component/Login/Faculty';
+import Admin from './Component/Login/Admin';
+import Student from './Component/Login/Student';
+
+
 import {NavLink , Route, Switch } from 'react-router-dom';
 // import { render } from '@testing-library/react';
  import Axios from 'axios';
@@ -32,6 +38,9 @@ function App() {
                 <Route path="/gallery" component={Gallery}/>
                 <Route path="/contact" component={Contact}/>
                  <Route path="/registraion"component={registration}/>
+                <Route path="/Faculty" component={Faculty}/>
+                <Route path="/Admin" component={Admin}/>
+                <Route path="/Student" component={Student}/>
             </Switch>
         </main>
   <div>
@@ -171,9 +180,18 @@ render(){
       
       <li className="menu_ani"> <NavLink activeClassName="active_class" to="/gallery"> GALLERY </NavLink> </li>
       <li className="menu_ani"> <NavLink activeClassName="active_class" to="/contact"> CONTACT </NavLink> </li>
-      <li> <input type="search" placeholder="Search" className="search_bar" id="search_bar"/>  </li>
+      <li> <input type="search" placeholder="Search" className="search_bar ml-auto" id="search_bar"/>  </li>
       <li>  <input type="button" className="submit_button" id="srch_btn" /> </li>
-
+     <li> <a href="#" className="arrow"> LOGIN </a> 
+            <div className="sub"> 
+              <ul>
+                   <NavLink activeClassName="active_class menu_ani" to="/Admin"> Admin </NavLink>
+                   <NavLink activeClassName="active_class menu_ani" to="Faculty">Faculty </NavLink>
+                   <NavLink activeClassName="active_class menu_ani" to="Student">Student </NavLink>
+                   
+              </ul>
+             </div>
+             </li>
     </ul>
   </div>
 </div>
