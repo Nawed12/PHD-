@@ -1,5 +1,6 @@
 import React from 'react';
-
+import Header from '../Header';
+import Footer from '../Footer';
 class Contact extends React.Component {
     componentDidMount() {
         var staff_logo = document.getElementsByClassName('staff_logo');
@@ -72,6 +73,7 @@ class Contact extends React.Component {
        }
         return (
             <div>
+                <Header/>
                 <div style={card}>
                     <div style={container}>
                         <h1 style={conH1}>Contact</h1>
@@ -130,6 +132,7 @@ class Contact extends React.Component {
                         </span><br /><br />
                     </div>
                 </div>
+                <Footer/>
             </div>
         )
     }

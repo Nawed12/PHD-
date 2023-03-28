@@ -1,10 +1,12 @@
 import React from 'react'
 import $ from 'jquery'
 import { NavLink, Route, Switch } from 'react-router-dom';
-import Photo1 from '../Gallery/Photo1';
-import Photo2 from '../Gallery/Photo2';
-import Photo3 from '../Gallery/Photo3';
-import '../Gallery/Gallery.css';
+import Photo1 from '../../Gallery/Photo1';
+import Photo2 from '../../Gallery/Photo2';
+import Photo3 from '../../Gallery/Photo3';
+import '../../Gallery/Gallery.css';
+import Header from '../Header';
+import Footer from '../Footer';
 
 class Gallery extends React.Component {
     componentDidMount = () => {
@@ -26,6 +28,7 @@ class Gallery extends React.Component {
     render() {
         return (
             <div>
+                <Header/>
                 <h1 className="heading_gallery">Photo Gallery</h1>
                 <div className="gallery_main_div">
                 <main>
@@ -48,7 +51,7 @@ class Gallery extends React.Component {
                         <NavLink activeClassName="active_class" to="/gallery/photo3" className="link">3</NavLink>
                         <NavLink to="/gallery/photo3" className="link">&raquo;</NavLink>
                     </div></center>
-
+            <Footer/>
             </div>
         )
     }
