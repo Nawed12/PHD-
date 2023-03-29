@@ -1,4 +1,4 @@
-import './App.css';
+import './App2.css';
 import './fonts/font.ttf';
 import './fonts/monotype_font.ttf';
 import './fonts/Rakkas.ttf';
@@ -21,6 +21,8 @@ import AdminGetAllFaculty from './Pages/Admin/AdminGetAllFaculty'
 import AdminGetAllStudent from './Pages/Admin/AdminGetAllStudents'
 import AdminGetAllSubject from './Pages/Admin/AdminGetAllSubjects'
 import AdminHome from './Pages/Admin/AdminHome'
+
+import AdminAddFaculty from './Pages/AdminAddFaculty';
 
 
 import {NavLink , Route, Switch } from 'react-router-dom';
@@ -45,7 +47,7 @@ function App() {
                 <Route path="/StudentLogin" component={StudentLogin}/>
                 <Route exact path='/admin' component={AdminHome} />
           {/* <Route exact path="/admin/addStudent" component={AdminAddStudent} /> */}
-          {/* <Route exact path="/admin/addFaculty" component={AdminAddFaculty} /> */}
+          <Route exact path="/admin/addFaculty" component={AdminAddFaculty} />
           {/* <Route exact path="/admin/addSubject" component={AdminAddSubject} /> */}
           <Route exact path="/admin/addAdmin" component={AdminAddAdmin} />
           <Route exact path="/admin/allFaculties" component={AdminGetAllFaculty} />
