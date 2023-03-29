@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 // import { useSelector, useDispatch } from 'react-redux'
 // import { adminLogout } from '../redux/action/adminAction'
+// import '../styles/Form2.css'
+import '../styles/Form.css'
 
 
 const Home = () => {

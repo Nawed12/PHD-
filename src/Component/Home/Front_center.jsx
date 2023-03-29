@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../App.css';
-import "../../styles/Home.css";
+import '../../App2.css';
+import "../../styles/Home2.css";
 import { Link } from "react-router-dom";
 import Header from '../Header';
 import Footer from '../Footer';

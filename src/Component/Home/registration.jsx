@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
- import "../../styles/Form.css";
+ import "../../styles/Form2.css";
 import Footer from '../Footer';
 import Header from '../Header';
 
