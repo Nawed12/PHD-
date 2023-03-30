@@ -27,6 +27,14 @@ import AdminAddSubject from './Pages/AdminAddSubject';
 
 import FacultyInterface from './Pages/FacultyInterface';
 
+import StudentDetails from './Pages/StudentDetails';
+import StudentAttendencePage from './Pages/StudentAttendencePage';
+import StudentUpdatePassword from './Pages/StudentUpdatePassword';
+import StudentUpdateProfile from './Pages/StudentUpdateProfile';
+import StudentSubjectList from './Pages/Student/StudentSubjectList';
+import StudentTestPerformace from './Pages/Student/StudentTestPerformance';
+import Home from './Pages/StudentHome';
+
 
 import {NavLink , Route, Switch } from 'react-router-dom';
 // import { render } from '@testing-library/react';
@@ -56,7 +64,12 @@ function App() {
           <Route exact path="/admin/allStudents" component={AdminGetAllStudent} />
           <Route exact path="/admin/allSubject" component={AdminGetAllSubject} />
           <Route exact path='/faculty' component={FacultyInterface} />
-
+          <Route exact path='/student/updateProfile' component={StudentUpdateProfile} />
+          <Route exact path="/studentDetails" component={StudentDetails} />
+          <Route exact path="/student/attendence" component={StudentAttendencePage} />
+          <Route exact path="/student/updatePassword" component={StudentUpdatePassword} />
+          <Route exact path="/student/testPerformance" component={StudentTestPerformace} />
+          <Route exact path='/home' component={Home} />
             </Switch>
         </main>
   <div>
