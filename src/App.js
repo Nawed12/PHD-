@@ -25,6 +25,8 @@ import AdminAddFaculty from './Pages/AdminAddFaculty';
 import AdminAddStudent from './Pages/AdminAddStudent';
 import AdminAddSubject from './Pages/AdminAddSubject';
 
+import FacultyInterface from './Pages/FacultyInterface';
+
 
 import {NavLink , Route, Switch } from 'react-router-dom';
 // import { render } from '@testing-library/react';
@@ -53,6 +55,7 @@ function App() {
           <Route exact path="/admin/allFaculties" component={AdminGetAllFaculty} />
           <Route exact path="/admin/allStudents" component={AdminGetAllStudent} />
           <Route exact path="/admin/allSubject" component={AdminGetAllSubject} />
+          <Route exact path='/faculty' component={FacultyInterface} />
 
             </Switch>
         </main>
