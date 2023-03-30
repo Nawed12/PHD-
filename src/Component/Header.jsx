@@ -122,7 +122,7 @@ class Header extends React.Component{
         <li className="menu_ani"> <NavLink to="/"> HOME </NavLink> </li>
         <li className="menu_ani" id="abt"> <NavLink activeClassName="active_class" to="/about"> ABOUT  </NavLink>  </li>
         <li className="menu_ani" > <NavLink activeClassName="active_class" to="/news"> NEWS </NavLink>    </li>
-        <li className="menu_ani"> <NavLink activeClassName="active_class" to="/student"> PLACEMENT </NavLink>  </li>
+        <li className="menu_ani"> <NavLink activeClassName="active_class" to="/placement"> PLACEMENT </NavLink>  </li>
         
   
         
