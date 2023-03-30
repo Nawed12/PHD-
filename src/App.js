@@ -23,6 +23,8 @@ import AdminGetAllSubject from './Pages/Admin/AdminGetAllSubjects'
 import AdminHome from './Pages/Admin/AdminHome'
 
 import AdminAddFaculty from './Pages/AdminAddFaculty';
+import AdminAddStudent from './Pages/AdminAddStudent';
+import AdminAddSubject from './Pages/AdminAddSubject';
 
 
 import {NavLink , Route, Switch } from 'react-router-dom';
@@ -46,9 +48,9 @@ function App() {
                 <Route path="/AdminLogin" component={AdminLogin}/>
                 <Route path="/StudentLogin" component={StudentLogin}/>
                 <Route exact path='/admin' component={AdminHome} />
-          {/* <Route exact path="/admin/addStudent" component={AdminAddStudent} /> */}
+          <Route exact path="/admin/addStudent" component={AdminAddStudent} />
           <Route exact path="/admin/addFaculty" component={AdminAddFaculty} />
-          {/* <Route exact path="/admin/addSubject" component={AdminAddSubject} /> */}
+          <Route exact path="/admin/addSubject" component={AdminAddSubject} />
           <Route exact path="/admin/addAdmin" component={AdminAddAdmin} />
           <Route exact path="/admin/allFaculties" component={AdminGetAllFaculty} />
           <Route exact path="/admin/allStudents" component={AdminGetAllStudent} />
