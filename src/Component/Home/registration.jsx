@@ -15,8 +15,8 @@ function Form() {
       <div className="cotainer">
         <h1>Centurion University Entrance Exam (Phd)</h1>
       </div>
-     <div className="container">
-        <div className="container1">
+     <div className="container3">
+        <div className="container4">
         <div className="split-screen">
             <div className="left">
                <section className="copy">
