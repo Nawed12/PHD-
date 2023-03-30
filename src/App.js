@@ -16,7 +16,6 @@ import FacultyLogin from './Component/Login/FacultyLogin';
 import AdminLogin from './Component/Login/AdminLogin';
 import StudentLogin from './Component/Login/StudentLogin';
 
-import AdminAddAdmin from './Pages/Admin/AdminAddAdmin';
 import AdminGetAllFaculty from './Pages/Admin/AdminGetAllFaculty'
 import AdminGetAllStudent from './Pages/Admin/AdminGetAllStudents'
 import AdminGetAllSubject from './Pages/Admin/AdminGetAllSubjects'
@@ -51,7 +50,6 @@ function App() {
           <Route exact path="/admin/addStudent" component={AdminAddStudent} />
           <Route exact path="/admin/addFaculty" component={AdminAddFaculty} />
           <Route exact path="/admin/addSubject" component={AdminAddSubject} />
-          <Route exact path="/admin/addAdmin" component={AdminAddAdmin} />
           <Route exact path="/admin/allFaculties" component={AdminGetAllFaculty} />
           <Route exact path="/admin/allStudents" component={AdminGetAllStudent} />
           <Route exact path="/admin/allSubject" component={AdminGetAllSubject} />

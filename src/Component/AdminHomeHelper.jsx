@@ -44,9 +44,6 @@ const Home = () => {
                             <button type="button" className="btn"><Link to="/admin/addSubject"><li>ADD SUBJECT</li></Link></button>
                         </li>
                         <li className="nav-item">
-                            <button type="button" className="btn"><Link to="/admin/addAdmin"><li>ADD ADMIN</li></Link></button>
-                        </li>
-                        <li className="nav-item">
                             <button type="button" className="btn"><Link to="/admin/allFaculties"><li>OUR FACULTIES</li></Link></button>
                         </li>
                         <li className="nav-item">
