@@ -35,6 +35,11 @@ import StudentSubjectList from './Pages/Student/StudentSubjectList';
 import StudentTestPerformace from './Pages/Student/StudentTestPerformance';
 import Home from './Pages/StudentHome';
 
+import FacultyUploadMarks from './Pages/Faculty/FacultyUploadMarks'
+import FacultyUpdateProfile from './Pages/Faculty/FacultyUpdateProfile'
+import FacultyUpdatePassword from './Pages/FacultyUpdatePassword'
+import AttendenceFaculty from './Pages/AttendenceFaculty'
+
 
 import {NavLink , Route, Switch } from 'react-router-dom';
 // import { render } from '@testing-library/react';
@@ -70,6 +75,10 @@ function App() {
           <Route exact path="/student/updatePassword" component={StudentUpdatePassword} />
           <Route exact path="/student/testPerformance" component={StudentTestPerformace} />
           <Route exact path='/home' component={Home} />
+          <Route exact path="/faculty/updatePassword" component={FacultyUpdatePassword} />
+          <Route exact path="/faculty/uploadMarks" component={FacultyUploadMarks} />
+          <Route exact path="/faculty/updateProfile" component={FacultyUpdateProfile} />
+          <Route exact path='/attendenceFaculty' component={AttendenceFaculty} />
             </Switch>
         </main>
   <div>
