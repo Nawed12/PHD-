@@ -1,5 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
+import {FloatButton} from "antd";
+import {MessageFilled,UserAddOutlined} from "@ant-design/icons"
 class Header extends React.Component{
     constructor(prop){
       super(prop);
@@ -144,9 +146,29 @@ class Header extends React.Component{
     </div>
   </div>
   
+  
   </header>
+
+
+  <div className="float">
+    <Link to="/registraion">
+      <FloatButton
+      icon={<UserAddOutlined/>}
+      style={{width:100, height:80,  right:10,top:190}}
+      shape="square"
+      tooltip="Registration"
+      description="Registration"
+      type="primary"
+      />
+      </Link>
+      </div>
+
   
       </div>
+
+
+
+
     )
   
   
