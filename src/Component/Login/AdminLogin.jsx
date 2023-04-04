@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from '../Footer';
 import Header from '../Header';
+import { Link } from 'react-router-dom';
 // import { useSelector, useDispatch } from 'react-redux'
 // import { useHistory } from 'react-router-dom'
 // import { adminLogin } from '../redux/action/adminAction'
@@ -87,7 +88,9 @@ import Header from '../Header';
                                 </div> */}
                                 {/* {!isLoading && <button type="submit" className="btn btn-info btn-block">Login</button>}
                                  */}
+                                 <Link to="/admin">
                                  <button type='submit' className='btn btn-info btn-block'>Login</button>
+                                 </Link>
                             </form>
                         </div>
                     </div>
