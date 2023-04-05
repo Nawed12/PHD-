@@ -106,7 +106,7 @@ class Header extends React.Component{
        <NavLink to="/" style={{textDecoration:"none"}}>
        <h1 className="university_cutm"> <span> CENTURION &nbsp;UNIVERSITY </span> </h1> <br/>
        </NavLink>
-        <h3 className="jamia_millia_islamia"> PHD DASHBOARD  <br/> <p id="central">(Top Private University in Bhubaneswar)</p> </h3>
+        <h3 className="university_cutm"> PHD DASHBOARD  <br/> <p id="central">(Top Private University in Bhubaneswar)</p> </h3>
   
   
         <li id="menu">
