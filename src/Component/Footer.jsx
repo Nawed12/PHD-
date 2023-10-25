@@ -102,7 +102,8 @@ class Footer extends React.Component{
   
           <div className="suggestion">
               <span className="suggest"> LOCATION </span> <br/>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3786.451047654455!2d77.28065243234957!3d28.5634643286692!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfa52d7407045faf9!2sUniversity%20cutm!5e1!3m2!1sen!2sin!4v1624809167344!5m2!1sen!2sin" height="130" width="250" style={{border:'0',borderRadius:'2px'}} allowfullscreen="" loading="lazy" ></iframe>
+             
+              <iframe src="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Centurion university janti&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" height="250" width="550" style={{border:'0',borderRadius:'2px'}} allowfullscreen="" loading="lazy" ></iframe>
           </div><br/>
   
       </footer>     
