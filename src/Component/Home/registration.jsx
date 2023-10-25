@@ -1,22 +1,51 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+//  import "../styles/Form.css";
  import "../../styles/Form2.css";
-import Footer from '../Footer';
-import Header from '../Header';
+ import Footer from '../Footer';
+ import Header from '../Header';
+// import "../photo/cutm2.jpg";
 
 
 
 
 function Form() {
 
+  const[name,setName]=useState('')
+  const[mobile,setMobile]=useState('')
+  const[email,setEmail]=useState('')
+  const[city,setCity]=useState('')
+  const[state,setState]=useState('')
+  const[pincode,setPincode]=useState('')
+  const[tenth,setTenth]=useState('')
+  const[twelveth,setTwelveth]=useState('')
+  const[graduation,setGraduation]=useState('')
+  // const[preferences,setPreferences]=useState('')
 
+const handleClick=(e)=>{
+  e.preventDefault()
+  const student={name,mobile,email,city,state,tenth,twelveth,graduation,pincode}
+  console.log(student)
+  fetch("http://localhost:53711/records/save",{
+    method:"POST",
+    mode: 'no-cors',
+    headers:{
+      // "Content-Type":"application/json"
+      "Content-Type": "application/json"
+    },
+    body:JSON.stringify(student)
+  }).then(()=>{
+    console.log("New student is added")
+  })
+}
+    
     return (
-      <div><Header/>
+     <div><Header/>
       <>
       <div className="cotainer">
         <h1>Centurion University Entrance Exam (Phd)</h1>
       </div>
-     <div className="container3">
-        <div className="container4">
+     <div className="container">
+        <div className="container1">
         <div className="split-screen">
             <div className="left">
                <section className="copy">
@@ -32,39 +61,39 @@ function Form() {
             <div className="user-details"  >
           <div className="input-box ">
             <span className ="details">Your Name</span>
-            <input type="text" placeholder="Enter your name" required />
+            <input type="text" placeholder="Enter your name" required value={name} onChange={(e)=>setName(e.target.value)}/>
           </div>
           <div className="input-box ">
             <span className="details">Mobile</span>
-            <input type="text" placeholder="Enter mobile number" required />
+            <input type="text" placeholder="Enter mobile number" required value={mobile} onChange={(e)=>setMobile(e.target.value)}/>
           </div>
           <div className="input-box ">
             <span classNae="details">Email</span>
-            <input type="email" placeholder="Enter your email" required />
+            <input type="email" placeholder="Enter your email" required value={email} onChange={(e)=>setEmail(e.target.value)}/>
           </div>
           <div className="input-box ">
             <span className="details">City</span>
-            <input type="text" placeholder="Enter your city" required />
+            <input type="text" placeholder="Enter your city" required value={city} onChange={(e)=>setCity(e.target.value)}/>
           </div>
           <div className="input-box ">
             <span className="details">State</span>
-            <input type="text" placeholder="Enter your state" required />
+            <input type="text" placeholder="Enter your state" required value={state} onChange={(e)=>setState(e.target.value)}/>
           </div>
           <div className="input-box ">
             <span className="details">Pincode</span>
-            <input type="text" placeholder="Confirm your pincode" required />
+            <input type="text" placeholder="Confirm your pincode" required value={pincode} onChange={(e)=>setPincode(e.target.value)}/>
           </div>
           <div className="input-box ">
             <span classNae="details">10th</span>
-            <input type="text" placeholder="Enter your 10th mark" required />
+            <input type="text" placeholder="Enter your 10th mark" required value={tenth} onChange={(e)=>setTenth(e.target.value)}/>
           </div>
           <div className="input-box ">
             <span className="details">12th</span>
-            <input type="text" placeholder="Enter your 12th mark" required />
+            <input type="text" placeholder="Enter your 12th mark" required value={twelveth} onChange={(e)=>setTwelveth(e.target.value)}/>
           </div>
           <div className="input-box ">
             <span className="details">Graduation</span>
-            <input type="text" placeholder="Enter your graduation" required/>
+            <input type="text" placeholder="Enter your graduation" required value={graduation} onChange={(e)=>setGraduation(e.target.value)}/>
           </div>
           <div className="input-box ">
             <span className="details">Perferences </span>
@@ -89,7 +118,7 @@ function Form() {
         
     
         <div class="button">
-          <input type="submit" value="Apply" />
+          <input type="submit" value="Apply" onClick={handleClick}/>
         </div>
             </form>
             </div>
@@ -101,7 +130,7 @@ function Form() {
       </>
       <div><Footer/></div>
       </div>
-
+     
     );
   }
   
