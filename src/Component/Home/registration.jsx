@@ -7,9 +7,80 @@ import Header from '../Header';
 
 
 function Form() {
+  const [formData, setFormData] = useState({
+    name: '',
+    mobile: '',
+    email: '',
+    city: '',
+    state: '',
+    pincode: '',
+    matrik: '',
+    highersecondary: '',
+    graduation: '',
+    email: '',
+  })
+
+  const handleChange = (e) => {
+    const {name, value}= e.target;
+    setFormData({
+      ...formData, [name] : value
+    })
+  }
+  const [mobile, setmobile] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  
+  
+  const handleSubmit = (e) => {
+    e.preventData()
+    const validationErrors = {}
+    if(!formData.name.trim()) {
+      validationErrors.name = "name is required"
+    }
+
+    if(!formData.email.trim()) {
+      validationErrors.name = "email is required"
+    } else if(!/\S+@\S\.\S+/.test(formData.email)){
+      validationErrors.email = "email is not valid"
+    }
+
+    if(!formData.mobile.trim()) {
+      validationErrors.name = "mobile is required"
+    } else if( formData.length != 10) {
+      validationErrors.name = 'Please provide valid phone number'
+      
+ }
+
+    if(!formData.city.trim()) {
+      validationErrors.name = "city is required"
+    }
+
+    if(!formData.state.trim()) {
+      validationErrors.name = "state is required"
+    } else if(!/^[a-zA-Z\s]+$/.test(formData.state)){
+      validationErrors.name = 'State must contain only letters and spaces';
+    }
+
+    if(!formData.pincode.trim()) {
+      validationErrors.name = "pincode is required"
+    }
+
+    if(!formData.matrik.trim()) {
+      validationErrors.name = "matrik mark is required"
+    }
+
+    if(!formData.highersecondary.trim()) {
+      validationErrors.name = "highersecondary mark is required"
+    }
+
+    if(!formData.graduation.trim()) {
+      validationErrors.name = "graduation mark is required"
+    }
+  }
 
 
     return (
+      <form onSubmit={handleSubmit}>
       <div><Header/>
       <>
       <div className="cotainer">
@@ -31,15 +102,15 @@ function Form() {
                 </section>
             <div className="user-details"  >
           <div className="input-box ">
-            <span className ="details">Your Name</span>
-            <input type="text" placeholder="Enter your name" required />
+            <span className ="details">Name</span>
+            <input type="text" placeholder="Enter your name" required onChange={handleChange}/>
           </div>
           <div className="input-box ">
             <span className="details">Mobile</span>
-            <input type="text" placeholder="Enter mobile number" required />
+            <input type="number" placeholder="Enter mobile number" required maxLength="10" onChange={handleChange}/>
           </div>
           <div className="input-box ">
-            <span classNae="details">Email</span>
+            <span className="details">Email</span>
             <input type="email" placeholder="Enter your email" required />
           </div>
           <div className="input-box ">
@@ -52,19 +123,19 @@ function Form() {
           </div>
           <div className="input-box ">
             <span className="details">Pincode</span>
-            <input type="text" placeholder="Confirm your pincode" required />
+            <input type="number" placeholder="Confirm your pincode" required maxLength="5" />
           </div>
           <div className="input-box ">
             <span classNae="details">10th</span>
-            <input type="text" placeholder="Enter your 10th mark" required />
+            <input type="number" placeholder="Enter your 10th mark" required />
           </div>
           <div className="input-box ">
             <span className="details">12th</span>
-            <input type="text" placeholder="Enter your 12th mark" required />
+            <input type="number" placeholder="Enter your 12th mark" required />
           </div>
           <div className="input-box ">
             <span className="details">Graduation</span>
-            <input type="text" placeholder="Enter your graduation" required/>
+            <input type="number" placeholder="Enter your graduation" required/>
           </div>
           <div className="input-box ">
             <span className="details">Perferences </span>
@@ -101,7 +172,7 @@ function Form() {
       </>
       <div><Footer/></div>
       </div>
-
+      </form>
     );
   }
   
