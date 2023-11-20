@@ -103,7 +103,7 @@ class Footer extends React.Component{
           <div className="suggestion">
               <span className="suggest"> LOCATION </span> <br/>
              
-              <iframe src="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Centurion university janti&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" height="230" width="400" style={{border:'0',borderRadius:'2px'}} allowfullscreen="" loading="lazy" ></iframe>
+              <iframe src="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Centurion university janti&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" height="240" width="390" style={{border:'0',borderRadius:'2px'}} allowfullscreen="" loading="lazy" ></iframe>
           </div><br/>
   
       </footer>     
