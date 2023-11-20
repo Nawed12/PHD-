@@ -4,12 +4,8 @@ import React, { useState } from 'react';
  import Footer from '../Footer';
  import Header from '../Header';
 // import "../photo/cutm2.jpg";
-
-
-
-
+import axios from "axios";
 function Form() {
-
   const[name,setName]=useState('')
   const[mobile,setMobile]=useState('')
   const[email,setEmail]=useState('')
@@ -19,24 +15,44 @@ function Form() {
   const[tenth,setTenth]=useState('')
   const[twelveth,setTwelveth]=useState('')
   const[graduation,setGraduation]=useState('')
+  const[password,setPassword]=useState('')
   // const[preferences,setPreferences]=useState('')
 
-const handleClick=(e)=>{
-  e.preventDefault()
-  const student={name,mobile,email,city,state,tenth,twelveth,graduation,pincode}
-  console.log(student)
-  fetch("http://localhost:53711/records/save",{
-    method:"POST",
-    mode: 'no-cors',
-    headers:{
-      // "Content-Type":"application/json"
-      "Content-Type": "application/json"
-    },
-    body:JSON.stringify(student)
-  }).then(()=>{
-    console.log("New student is added")
-  })
-}
+  async function save(event)
+    {
+        event.preventDefault();
+    try
+        {
+         await axios.post("http://localhost:8085/api/v1/student/save", 
+        {  
+        name: name,
+        mobile : mobile,
+        email : email,
+        city : city,
+        state : state,
+        pincode : pincode,
+        tenth : tenth,
+        twelveth : twelveth,
+        graduation : graduation,
+        password:password
+        });
+          alert("User Registation Successfully");
+          
+        }
+    catch(err)
+        {
+          alert("User Registation Failed");
+        }
+   }
+
+  //  return (
+  //   <div className="register-container">
+ 
+  //       <form className="register-form" onSubmit={handleSubmit}> 
+  //       <br></br>      
+  //       <h1>Register</h1>
+  //       <p>Fill in the Information Below</p>
+
     
     return (
      <div><Header/>
@@ -61,41 +77,86 @@ const handleClick=(e)=>{
             <div className="user-details"  >
           <div className="input-box ">
             <span className ="details">Your Name</span>
-            <input type="text" placeholder="Enter your name" required value={name} onChange={(e)=>setName(e.target.value)}/>
+            
+            <input type="text" placeholder="Enter your name" value={name}
+            onChange={(event)=>
+            {
+              setName(event.target.value)
+            }}/>
           </div>
           <div className="input-box ">
             <span className="details">Mobile</span>
-            <input type="text" placeholder="Enter mobile number" required value={mobile} onChange={(e)=>setMobile(e.target.value)}/>
+            <input type='number' placeholder="Enter mobile number" id='mobile' value={mobile}
+            onChange={(event)=>
+              {
+              setMobile(event.target.value)
+            }}/>
           </div>
           <div className="input-box ">
             <span classNae="details">Email</span>
-            <input type="email" placeholder="Enter your email" required value={email} onChange={(e)=>setEmail(e.target.value)}/>
+            <input type="email" placeholder="Enter your email"  id='email' value={email}
+            onChange={(event)=>
+              {
+              setEmail(event.target.value)
+            }}/>
           </div>
           <div className="input-box ">
             <span className="details">City</span>
-            <input type="text" placeholder="Enter your city" required value={city} onChange={(e)=>setCity(e.target.value)}/>
+            <input type="text" placeholder="Enter your city"  id='city' value={city}
+            onChange={(event)=>
+              {
+              setCity(event.target.value)
+            }}/>
           </div>
           <div className="input-box ">
             <span className="details">State</span>
-            <input type="text" placeholder="Enter your state" required value={state} onChange={(e)=>setState(e.target.value)}/>
+            <input type="text" placeholder="Enter your state" id='state' value={state}
+             onChange={(event)=>
+              {
+              setState(event.target.value)
+            }}/>
           </div>
           <div className="input-box ">
             <span className="details">Pincode</span>
-            <input type="text" placeholder="Confirm your pincode" required value={pincode} onChange={(e)=>setPincode(e.target.value)}/>
+            <input type="number" placeholder="Confirm your pincode"  id='pincode' value={pincode}
+            onChange={(event)=>
+              {
+              setPincode(event.target.value)
+            }}/>
           </div>
           <div className="input-box ">
             <span classNae="details">10th</span>
-            <input type="text" placeholder="Enter your 10th mark" required value={tenth} onChange={(e)=>setTenth(e.target.value)}/>
+            <input type="number" placeholder="Enter your 10th mark" id='tenth' value={tenth}
+             onChange={(event)=>
+              {
+              setTenth(event.target.value)
+            }}/>
           </div>
           <div className="input-box ">
             <span className="details">12th</span>
-            <input type="text" placeholder="Enter your 12th mark" required value={twelveth} onChange={(e)=>setTwelveth(e.target.value)}/>
+            <input type="number" placeholder="Enter your 12th mark"  id='twelveth' value={twelveth}
+            onChange={(event)=>
+              {
+              setTwelveth(event.target.value)
+            }}/>
           </div>
           <div className="input-box ">
             <span className="details">Graduation</span>
-            <input type="text" placeholder="Enter your graduation" required value={graduation} onChange={(e)=>setGraduation(e.target.value)}/>
+            <input type="number" placeholder="Enter your graduation" id='graduation' value={graduation}
+            onChange={(event)=>
+              {
+              setGraduation(event.target.value)
+            }}/>
           </div>
           <div className="input-box ">
+            <span className="details">Password</span>
+            <input type="password" placeholder="Enter Password" id='password' value={password}
+            onChange={(event)=>
+              {
+              setPassword(event.target.value)
+            }}/>
+          </div>
+          {/* <div className="input-box ">
             <span className="details">Perferences </span>
             <select type="text" name="languages" id="lang"> 
         <option value="javascript">JavaScript</option>
@@ -107,7 +168,7 @@ const handleClick=(e)=>{
         <option value="C++">C++</option>
         <option value="erlang">Erlang</option>
       </select>
-          </div>
+          </div> */}
           </div>
           <div class="input-container cta">
             <label class="checkbox-container"></label>
@@ -118,14 +179,17 @@ const handleClick=(e)=>{
         
     
         <div class="button">
-          <input type="submit" value="Apply" onClick={handleClick}/>
+          <input type="submit" onClick={save} value="Apply" /*onClick={handleClick} *//>
         </div>
-            </form>
+
+        {/* <button type="submit">Register</button> */}
+
+        </form>
+            
             </div>
         </div>
      </div>
      </div>
-
 
       </>
       <div><Footer/></div>
