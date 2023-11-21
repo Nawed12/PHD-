@@ -95,6 +95,8 @@ class Footer extends React.Component{
                   <input type="text" name="name" placeholder="Name" className="suggest_name" autoComplete="OFF" onChange={this.getDate}/> <br/>
                   <input type="email" name="email" placeholder="E-mail" className="suggest_email" autoComplete="OFF" onChange={this.getDate}/> <br/>
                   <textarea name="message" cols="19" rows="3" placeholder="Message" className="suggest_text" onChange={this.getDate}></textarea>
+                 <br></br>
+                 <br></br>
                   <input type="submit" className="suggest_submit"/>
               </form>
   
@@ -103,7 +105,7 @@ class Footer extends React.Component{
           <div className="suggestion">
               <span className="suggest"> LOCATION </span> <br/>
              
-              <iframe src="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Centurion university janti&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" height="240" width="400" style={{border:'0',borderRadius:'2px'}} allowfullscreen="" loading="lazy" ></iframe>
+              <iframe src="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Centurion university janti&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" height="190" width="400" style={{border:'0',borderRadius:'2px'}} allowfullscreen="" loading="lazy" ></iframe>
           </div><br/>
   
       </footer>     
