@@ -66,7 +66,7 @@ function Login() {
                                          }}
           
                                          />
-                                        <input type="text" />
+                                        
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="passwordFacId">Password</label>
@@ -78,7 +78,7 @@ function Login() {
             }}
             
             />
-                                        <input type="text" />
+                                       
                                     </div>
                                    
 
