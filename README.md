@@ -1,70 +1,35 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# College ERP 🏫
 
-## Available Scripts
+- This is a simple college erp web app for PHD Students studying in Centurion University of Technology and Management.
 
-In the project directory, you can run:
+* All the fields (students,teachers,class,exams) can be edited via the admin panel.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prerequisites 🧾
 
-### `npm test`
+- Client: React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Server: Spring Boot
 
-### `npm run build`
+- Database: MySql
+## Features 👓
+- Create new students.
+- Create new teacher.
+- Create new user and assign permissions and roles.
+- Students, Teacher are in one-to-many relations in database.
+- Exam, Course,admin are in mant-to-many realtions in database.
+## Instructions👨‍🏫
+- Open project folder in a terminal or prefered IDE .
+- Perform "npm install " or "yarn install".
+- Type npm "start-script build" this will make a html and manifest file in client/build folder to render on a browser.
+- Once node_modules are downloaded type "npm start" or "yarn start" to start the server on prescribed port.
+## Screenshot 📷
+![Home Page](https://github.com/Nawed12/PHD-/assets/114047447/b0c0adc0-f8a5-4c47-be01-d905d7f3511c)
+![Registration Page](https://github.com/Nawed12/PHD-/assets/114047447/1258eb60-1834-4ef7-ab4e-d7f662e18947)
+![Gallery](https://github.com/Nawed12/PHD-/assets/114047447/92d9caf6-85fb-4901-966a-bb6d99afdfde)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
