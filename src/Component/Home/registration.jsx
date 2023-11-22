@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-//  import "../styles/Form.css";
+import React, { useState } from 'react'
  import "../../styles/Form2.css";
- import Footer from '../Footer';
- import Header from '../Header';
-// import "../photo/cutm2.jpg";
+import Footer from '../Footer';
+import Header from '../Header';
 import axios from "axios";
+
+
+
 function Form() {
   const[name,setName]=useState('')
   const[mobile,setMobile]=useState('')
@@ -45,28 +46,35 @@ function Form() {
         }
    }
 
-  //  return (
-  //   <div className="register-container">
- 
-  //       <form className="register-form" onSubmit={handleSubmit}> 
-  //       <br></br>      
-  //       <h1>Register</h1>
-  //       <p>Fill in the Information Below</p>
+  // const handleChange = (e) => {
+  //   const {name, value}= e.target;
+  //   setFormData({
+  //     ...formData, [name] : value
+  //   })
+  // }
+  
+  
+  const handleSubmit = (e) => {
+    e.preventData()
+    const validationErrors = {}
 
     
+  }
+
+  
+
+
     return (
-     <div><Header/>
+      <form onSubmit={handleSubmit}>
+      <div><Header/>
       <>
       <div className="cotainer">
         <h1>Centurion University Entrance Exam (Phd)</h1>
       </div>
-     <div className="container">
-        <div className="container1">
+     <div className="container3">
+        <div className="container4">
         <div className="split-screen">
             <div className="left">
-               <section className="copy">
-                <h1>CENTURION UNIVERSITY OF TECHNOLOGY AND MANAGEMENT</h1>
-               </section>
             </div>
             <div className="right">
             <form>
@@ -76,25 +84,24 @@ function Form() {
                 </section>
             <div className="user-details"  >
           <div className="input-box ">
-            <span className ="details">Your Name</span>
-            
-            <input type="text" placeholder="Enter your name" value={name}
+            <span className ="details">Name</span>
+            <input type="text" placeholder="Enter your name" required value={name}
             onChange={(event)=>
-            {
+              {
               setName(event.target.value)
             }}/>
           </div>
           <div className="input-box ">
             <span className="details">Mobile</span>
-            <input type='number' placeholder="Enter mobile number" id='mobile' value={mobile}
+            <input type="tel" placeholder="Enter mobile number" required pattern='[0-9]{10}' value={mobile}
             onChange={(event)=>
               {
               setMobile(event.target.value)
             }}/>
           </div>
           <div className="input-box ">
-            <span classNae="details">Email</span>
-            <input type="email" placeholder="Enter your email"  id='email' value={email}
+            <span className="details">Email</span>
+            <input type="email" placeholder="Enter your email" required value={email}
             onChange={(event)=>
               {
               setEmail(event.target.value)
@@ -102,7 +109,7 @@ function Form() {
           </div>
           <div className="input-box ">
             <span className="details">City</span>
-            <input type="text" placeholder="Enter your city"  id='city' value={city}
+            <input type="text" placeholder="Enter your city" required value={city}
             onChange={(event)=>
               {
               setCity(event.target.value)
@@ -110,39 +117,39 @@ function Form() {
           </div>
           <div className="input-box ">
             <span className="details">State</span>
-            <input type="text" placeholder="Enter your state" id='state' value={state}
-             onChange={(event)=>
+            <input type="text" placeholder="Enter your state" required value={state}
+            onChange={(event)=>
               {
               setState(event.target.value)
             }}/>
           </div>
           <div className="input-box ">
             <span className="details">Pincode</span>
-            <input type="number" placeholder="Confirm your pincode"  id='pincode' value={pincode}
+            <input type="tel" placeholder="Confirm your pincode" required pattern='[0-9]{5}' value={pincode}
             onChange={(event)=>
               {
               setPincode(event.target.value)
             }}/>
           </div>
           <div className="input-box ">
-            <span classNae="details">10th</span>
-            <input type="number" placeholder="Enter your 10th mark" id='tenth' value={tenth}
-             onChange={(event)=>
+            <span classNae="details">10th percentage</span>
+            <input type="tel" placeholder="Enter your 10th %" required pattern='[0-9]{2}' value={tenth}
+            onChange={(event)=>
               {
               setTenth(event.target.value)
             }}/>
           </div>
           <div className="input-box ">
-            <span className="details">12th</span>
-            <input type="number" placeholder="Enter your 12th mark"  id='twelveth' value={twelveth}
+            <span className="details">12th percentage</span>
+            <input type="tel" placeholder="Enter your 12th %" required pattern='[0-9]{2}' value={twelveth}
             onChange={(event)=>
               {
               setTwelveth(event.target.value)
             }}/>
           </div>
           <div className="input-box ">
-            <span className="details">Graduation</span>
-            <input type="number" placeholder="Enter your graduation" id='graduation' value={graduation}
+            <span className="details">Graduation percentage</span>
+            <input type="tel" placeholder="Enter your graduation %" required pattern='[0-9]{2}' value={graduation}
             onChange={(event)=>
               {
               setGraduation(event.target.value)
@@ -150,7 +157,7 @@ function Form() {
           </div>
           <div className="input-box ">
             <span className="details">Password</span>
-            <input type="password" placeholder="Enter Password" id='password' value={password}
+            <input type="password" placeholder="Enter your password" required pattern='[0-9]{2}' value={password}
             onChange={(event)=>
               {
               setPassword(event.target.value)
@@ -179,22 +186,19 @@ function Form() {
         
     
         <div class="button">
-          <input type="submit" onClick={save} value="Apply" /*onClick={handleClick} *//>
+          <input type="submit" value="Apply" />
         </div>
-
-        {/* <button type="submit">Register</button> */}
-
-        </form>
-            
+            </form>
             </div>
         </div>
      </div>
      </div>
 
+
       </>
       <div><Footer/></div>
       </div>
-     
+      </form>
     );
   }
   
