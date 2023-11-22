@@ -1,20 +1,25 @@
 import React, {useState, useEffect} from 'react'
-import { Link, useHistory } from 'react-router-dom'
-// import { useSelector, useDispatch } from 'react-redux'
-// import { studentLogout, newerChats, previousChats} from '../redux/action/studentAction'
+import  { Link, useHistory } from 'react-router-dom'
+// import { useSelector ,useDispatch, Provider } from "react-redux"
+// import { studentLogout, newerChats, previousChats} from "../redux/action/studentAction"
 
 
 const Home = () => {
-    // const history = useHistory()
-    // const store = useSelector((store) => store)
-    // const [name, setName] = useState("")
-    // useEffect(() => {
-    //     if (store.student.student.student.name) {
-    //         setName(store.student.student.student.name)
-    //     }
-    // }, [store.student.student.student.name])
-    // const dispatch = useDispatch()
-    // useEffect(() => {
+   
+//     const history = useHistory()
+//     const store = useSelector((store) => store)
+//     const [name, setName] = useState("")
+//     <Provider>
+//     useEffect(() => {
+        
+//         if (store.student.student.student.name) {
+//             setName(store.student.student.student.name)
+//         } 
+//     }, [store.student.student.student.name])
+//     const dispatch = useDispatch()
+
+    
+//     // useEffect(() => {
     //     dispatch(newerChats(store.student.student.student.name))
     //     dispatch(previousChats(store.student.student.student.name))
     // }, [store.student.newerChats.length])
@@ -22,7 +27,9 @@ const Home = () => {
     //     dispatch(studentLogout())
     //     history.push('/')
     // }
+   
     return (
+       
         <div className="container-fluid">
             <div className="row">
                 <div className="col">
@@ -34,7 +41,7 @@ const Home = () => {
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav">
                                 <li className="nav-item active">
-                                    <button type="button" className="btn"><Link to="/home"></Link></button>
+                                    <button type="button" className="btn"><Link to="/home"><li></li></Link></button>
                                 </li>
                                 <li className="nav-item">
                                     <button type="button" className="btn"><Link to="/student/updateProfile"><li>UPDATE PROFILE</li></Link></button>
@@ -51,9 +58,7 @@ const Home = () => {
                                 <li className="nav-item">
                                     <button type="button" className="btn"><Link to="/studentDetails"><li>STUDENTS</li></Link></button>
                                 </li>
-                                {/* <li className="nav-item">
-                                    <button type="button" className="btn"><Link to="/studentDetails"><li>NEW CONVERSATION </li></Link></button>
-                                </li> */}
+                            
                                 <li className="nav-item">
                                     <button type="button" className="btn"><Link to="/student/updatePassword"><li>UPDATE PASSWORD</li></Link></button>
                                 </li>
@@ -63,7 +68,7 @@ const Home = () => {
                         </div>
                         <div>
                             
-                            <button style={{listStyle:"none"}} type="button" className="btn"> <li>LOGOUT</li></button>
+                            <button style={{listStyle:"none"}} type="button" className="btn"  > <li>LOGOUT</li></button>
                             
 
                         </div>
@@ -71,7 +76,9 @@ const Home = () => {
                 </div>
             </div>
         </div>
-    )
+        
+      )
+     
 }
 
 export default Home
